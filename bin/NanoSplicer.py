@@ -87,7 +87,7 @@ def parse_arg():
             -o      Prefix for output files <default: './output'>.
             --threads
                     Number of threads used <default: # of available cpus - 1>.
-            -F      File type. Enter p for pod5 or f for fast5 (optional)   
+            --file_type      File type. Enter p for pod5 or f for fast5 (optional)   
 
         More option on the candidate splice junctions (optional):
             By default, for each JWR, NanoSplicer includes the mapped splice junction and all GT-AG 
@@ -243,7 +243,7 @@ def parse_arg():
             find_ATAC = True
         elif opt == "--provided_junction_only":
             provided_junction_only = True
-        elif opt in ("-F", "--file_type"):
+        elif opt == "--file_type":
             file_type = arg
 
     # import global variable from config file 
